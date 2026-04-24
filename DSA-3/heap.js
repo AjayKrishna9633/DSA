@@ -42,85 +42,85 @@
 
 
 
-class MinHeap{
+// class MinHeap{
 
-    constructor(){
-        this.heap=[5,10,20,30,15]
-    }
-    getleftIndex(i){
-        return (i*2)+1
-    }
-    getrightIndex(i){
-        return (i*2)+2
-    }
-    getParentIndex(i){
-        return Math.floor((i-1)/2)
-    }
+//     constructor(){
+//         this.heap=[5,10,20,30,15]
+//     }
+//     getleftIndex(i){
+//         return (i*2)+1
+//     }
+//     getrightIndex(i){
+//         return (i*2)+2
+//     }
+//     getParentIndex(i){
+//         return Math.floor((i-1)/2)
+//     }
 
-    insert(val){
-        this.heap.push(val)
-        let lastindex= this.heap.length-1
-        this.heapify(lastindex)
+//     insert(val){
+//         this.heap.push(val)
+//         let lastindex= this.heap.length-1
+//         this.heapify(lastindex)
     
-    }
-    heapify(i){
-        while(i>0){
-        let parentindex = this.getParentIndex(i);
-            if(this.heap[i]<this.heap[parentindex]){
-                [this.heap[i],this.heap[parentindex]]=[this.heap[parentindex],this.heap[i]]
+//     }
+//     heapify(i){
+//         while(i>0){
+//         let parentindex = this.getParentIndex(i);
+//             if(this.heap[i]<this.heap[parentindex]){
+//                 [this.heap[i],this.heap[parentindex]]=[this.heap[parentindex],this.heap[i]]
 
-                i=parentindex
-            }else break
+//                 i=parentindex
+//             }else break
 
-    }
+//     }
 
-    }
+//     }
 
-    extract(){
-      if(this.heap.length<1)return null  
+//     extract(){
+//       if(this.heap.length<1)return null  
 
-        let lastindex= this.heap.length-1
-      let min = this.heap[0];
+//         let lastindex= this.heap.length-1
+//       let min = this.heap[0];
      
-      [this.heap[0],this.heap[lastindex]]=[this.heap[lastindex],this.heap[0]];
- this.heap.pop()
-      this.heapifyDown(0);
-      return min
+//       [this.heap[0],this.heap[lastindex]]=[this.heap[lastindex],this.heap[0]];
+//  this.heap.pop()
+//       this.heapifyDown(0);
+//       return min
     
-    }
+//     }
 
 
-    heapifyDown(i){
+//     heapifyDown(i){
     
        
-        let left = this.getleftIndex(i);
-        let right = this.getrightIndex(i);
-         let n= this.heap.length-1;
-        let smallest = i
-        if(left<n&&this.heap[left]<this.heap[smallest])
-        {
-            smallest=left
-        }
-        if(right<n&&this.heap[right]<this.heap[smallest]){
-            smallest= right
-        }
+//         let left = this.getleftIndex(i);
+//         let right = this.getrightIndex(i);
+//          let n= this.heap.length-1;
+//         let smallest = i
+//         if(left<n&&this.heap[left]<this.heap[smallest])
+//         {
+//             smallest=left
+//         }
+//         if(right<n&&this.heap[right]<this.heap[smallest]){
+//             smallest= right
+//         }
 
-        if(i!=smallest){
-            [this.heap[i],this.heap[smallest]]=[this.heap[smallest],this.heap[i]];
+//         if(i!=smallest){
+//             [this.heap[i],this.heap[smallest]]=[this.heap[smallest],this.heap[i]];
             
-        this.heapifyDown(smallest)
-        }
+//         this.heapifyDown(smallest)
+//         }
 
-    }
+//     }
 
- // peek operation
-    peek() {
-        if(!this.heap.length) return null;
-        return this.heap[0];
-    }
+//  // peek operation
+//     peek() {
+//         if(!this.heap.length) return null;
+//         return this.heap[0];
+//     }
 
 
-}
+// }
 
 
 
@@ -146,43 +146,121 @@ class MinHeap{
 
 
 
-let arr = [5,23,3,1,8,9];
+// let arr = [5,23,3,1,8,9];
 
-function heapSort(arr){
-    let n =arr.length;
-     for(let i =Math.floor(n/2);i>=0;i--){
+// function heapSort(arr){
+//     let n =arr.length;
+//      for(let i =Math.floor(n/2);i>=0;i--){
         
-        heapify(arr,i,n)
-     }
+//         heapify(arr,i,n)
+//      }
 
-     for(let i=n-1;i>0;i--){
-        [arr[0],arr[i]]=[arr[i],arr[0]]
-        heapify(arr,0,i)
-     }
-     return arr;
-}
+//      for(let i=n-1;i>0;i--){
+//         [arr[0],arr[i]]=[arr[i],arr[0]]
+//         heapify(arr,0,i)
+//      }
+//      return arr;
+// }
 
 
-function heapify(arr,i,n){
-    let largest = i;
-    let left  = (2*i)+1;
-    let  right = (2*i)+2;
+// function heapify(arr,i,n){
+//     let largest = i;
+//     let left  = (2*i)+1;
+//     let  right = (2*i)+2;
     
-    if(left<n&& arr[left]>arr[largest]){
-        largest = left
-    }
-    if(right<n&&arr[right]>arr[largest]){
-        largest=right;
-    }
-    if( i!=largest){
-        [arr[i],arr[largest]]=[arr[largest],arr[i]];
-        heapify(arr,largest,n)
-    }
+//     if(left<n&& arr[left]>arr[largest]){
+//         largest = left
+//     }
+//     if(right<n&&arr[right]>arr[largest]){
+//         largest=right;
+//     }
+//     if( i!=largest){
+//         [arr[i],arr[largest]]=[arr[largest],arr[i]];
+//         heapify(arr,largest,n)
+//     }
    
-}
+// }
 
 
 
-console.log(heapSort(arr));
+// console.log(heapSort(arr));
 
+
+
+// class MinHeap{
+//     constructor(){
+//         this.heap=[5, 10, 20, 30];
+//     }
+//     getleftIndex(i){
+//         return  (i*2)+1
+//     }
+//     getrightIndex(i){
+//         return (i*2)+2
+//     }
+//     getParentIndex(i){
+//         return Math.floor((i-1)/2)
+//     }
+//     insert(val){
+//         this.heap.push(val)
+//         let lastindex = this.heap.length-1;
+//         this.heapify(lastindex)
+//     }
+//     heapify(i){
+//         while(i>0){
+//             let parentindex = this.getParentIndex(i)
+//             if(this.heap[i]<this.heap[parentindex]){
+//                 [this.heap[i],this.heap[parentindex]]=[this.heap[parentindex],this.heap[i]]
+//                 i=parentindex
+//             }else break
+//         }
+//     }
+//     extract(){
+//         let min = this.heap[0];
+//         let lastindex= this.heap.length-1;
+//         [this.heap[0],this.heap[lastindex]]=[this.heap[lastindex],this.heap[0]];
+//         this.heap.pop();
+//         this.heapifyDown(0)
+//         return min
+//     }
+//     heapifyDown(i){
+//         let right = this.getrightIndex(i)
+//         let left = this.getleftIndex(i)
+//         let n = this.heap.length;
+//         let smallest = i;
+//         if(left<n&& this.heap[left]<this.heap[smallest]){
+//             smallest=left
+//         }
+//         if(right<n&& this.heap[right]<this.heap[smallest]){
+//             smallest= right
+//         }
+//         if(smallest!=i){
+//             [this.heap[smallest],this.heap[i]]= [this.heap[i],this.heap[smallest]]
+//             this.heapifyDown(smallest)
+//         }
+
+//     }
+//  peek() {
+//         if(!this.heap.length) return null;
+//         return this.heap[0];
+//     }
+
+// }
+
+// let h = new MinHeap();
+
+// console.log("Initial Heap:", h.heap);
+
+// h.insert(2);
+// console.log("After insert 2:", h.heap);
+
+// h.insert(1);
+// console.log("After insert 1:", h.heap);
+
+// console.log("Extract:", h.extract());
+// console.log("Heap after extract:", h.heap);
+
+// console.log("Extract:", h.extract());
+// console.log("Heap after extract:", h.heap);
+
+// console.log("Peek:", h.peek());
 
