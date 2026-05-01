@@ -264,3 +264,24 @@
 
 // console.log("Peek:", h.peek());
 
+
+
+
+
+//  heapifyDown(i){
+//         let right = this.getrightIndex(i)
+//         let left = this.getleftIndex(i)
+//         let n = this.heap.length;
+//         let smallest = i;
+//         if(left<n&& this.heap[left]<this.heap[smallest]){
+//             smallest=left
+//         }
+//         if(right<n&& this.heap[right]<this.heap[smallest]){
+//             smallest= right
+//         }
+//         if(smallest!=i){
+//             [this.heap[smallest],this.heap[i]]= [this.heap[i],this.heap[smallest]]
+//             this.heapifyDown(smallest)
+//         }
+//     }
+
